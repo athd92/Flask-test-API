@@ -1,0 +1,27 @@
+{
+    "cities": [{
+            "id": 1,
+            "title": "Paris",
+            "address": "21 rue du lac",
+            "zip": "75015",
+            "service": "vdsl",
+            "client": "id684"
+        },
+        {
+            "id": 2,
+            "title": "Lyon",
+            "address": "17 avenue Pierre",
+            "zip": "69005",
+            "service": "adsl",
+            "client": "id684"
+        },
+        {
+            "id": 3,
+            "title": "Marseille",
+            "address": "5 rue Reno",
+            "zip": "13001",
+            "service": "hebergement",
+            "client": "id684"
+        }
+    ]
+}

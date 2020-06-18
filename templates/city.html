@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+{% if result %}
+{% for city in result %}
+<div class='col-12'>
+<div class="card m-5" style="width: 18rem;" align=center>
+    <h2>Result</h2>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Name: {{city.title}}</li>
+    <li class="list-group-item">Address: {{city.address}}</li>
+    <li class="list-group-item">Zip: {{city.zip}}</li>
+    <li class="list-group-item">Service: {{city.service}}</li>
+    <li class="list-group-item">Service: {{city.client}}</li>
+
+  </ul>
+  <a class="btn btn-primary" href="/" role="button">Back to main page</a>
+</div>
+</div>
+{% endfor%}
+{% else %}
+<div class='col-12'>
+<div class="card m-5" style="width: 18rem;" align=center>
+    <h2>No matching found</h2>
+    <a class="btn btn-primary" href="/" role="button">Back to main page</a>
+  
+  </ul>
+</div>
+</div>
+{% endif %}
+
+

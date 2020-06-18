@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+
+
+
+{% if sent %}
+<div class="container" align='center'>
+    <div class="row">
+        <div class="col">
+            <div class="col-6 mt-5" align="center">
+                <h1 style='color:green'>{{sent}}...</h1>
+            </div>
+            {% else %}
+            {% endif %}
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-6 mt-5" align="center">
+                            <form action="/city/" method="GET">
+                                <p>Search city infos</p>
+                                <input type="text" name="title" />
+                                <br>
+                                <button type="submit" class="btn btn-success mt-5">Send GET request</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="col">
+                        <div class="col-6 mt-5" align="center">
+                            <form action="/send/" method="POST">
+                                <p>City name</p>
+                                <input type="text" name="title" />
+                                <p>Address</p>
+                                <input type="text" name="address" />
+                                <p>Zip code</p>
+                                <input type="text" name="zip" />
+                                <p>Service</p>
+                                <input type="text" name="service" />
+                                <p>Client number</p>
+                                <input type="text" name="client" />
+                                <br>
+                                <button type="submit" class="btn btn-success mt-5">Send a POST request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
